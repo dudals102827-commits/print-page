@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>출력용 문서</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+    .print-btn {
+      margin-bottom: 20px;
+      padding: 12px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    img {
+      width: 100%;
+      max-width: 800px;
+    }
+    @media print {
+      .print-btn {
+        display: none;
+      }
+      body {
+        padding: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<button class="print-btn" onclick="window.print()">인쇄하기</button>
+
+<img src="print.jpg" alt="출력용 문서">
+
+</body>
+</html>
