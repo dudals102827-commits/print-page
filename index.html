@@ -4,37 +4,27 @@
   <meta charset="UTF-8">
   <title>출력용 문서</title>
   <style>
-    body {
-      margin: 0;
-      padding: 20px;
-      text-align: center;
-      font-family: Arial, sans-serif;
-    }
+    body { margin: 0; padding: 20px; text-align: center; }
     .print-btn {
-      margin-bottom: 20px;
-      padding: 12px 20px;
-      font-size: 16px;
-      cursor: pointer;
+      margin-bottom: 20px; padding: 15px 30px;
+      font-size: 18px; cursor: pointer;
+      background-color: #fce100; border: 1px solid #e1c800; border-radius: 5px;
     }
-    img {
-      width: 100%;
-      max-width: 800px;
-    }
+    img { width: 100%; max-width: 800px; display: block; margin: 0 auto 20px auto; }
     @media print {
-      .print-btn {
-        display: none;
-      }
-      body {
-        padding: 0;
-      }
+      .print-btn { display: none; }
+      body { padding: 0; }
+      .page-break { page-break-after: always; } /* 첫 장 인쇄 후 다음 장으로 넘김 */
     }
   </style>
 </head>
 <body>
 
-<button class="print-btn" onclick="window.print()">인쇄하기</button>
+<button class="print-btn" onclick="window.print()">인쇄하기 (총 2장)</button>
 
-<img src="print.jpg" alt="출력용 문서">
+<img src="print.jpg" class="page-break">
+
+<img src="print2.jpg">
 
 </body>
 </html>
